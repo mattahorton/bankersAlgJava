@@ -11,4 +11,4 @@ BankersAlg.java - Initializes, starts, and stops the algorithm
 
 ==============
 
-Find more from Matt and matthewahorton.com
+Find more from Matt at matthewahorton.com
