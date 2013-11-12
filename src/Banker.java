@@ -20,7 +20,7 @@ public class Banker {
 	public void init(){
 		for(int k = 0; k < btNum; k++){
 			for(int m = 0; m < rNum; m++){
-				max[k][m] = randInt(0,20);
+				max[k][m] = randInt(0,available[m]);
 				alloc[k][m] = randInt(0,max[k][m]);
 			}
 		}
@@ -47,7 +47,7 @@ public class Banker {
 			need[i] = arraySubtract(need[i], r);
 
 			//Check for unsafe state
-			safe = safety(i);
+			safe = safety();
 
 			//If unsafe state found, revert allocation
 			if(!safe){
@@ -82,6 +82,23 @@ public class Banker {
 		}
 		return val;
 	}
+
+	public static int randInt(int min, int max) {
+
+    	Random rand = new Random();
+    	int randomNum = rand.nextInt((max - min) + 1) + min;
+		return randomNum;
+	}
+	
+	/*
+	/*
+	/*
+	/*
+	/*   NOTE: Methods below require mutex lock
+	/*
+	/*
+	/*
+	*/
 
 	public int[] arraySubtract(int[] a, int[] b){
 		int[] c = null;
@@ -128,19 +145,27 @@ public class Banker {
 		return c;
 	}
 
-	public static int randInt(int min, int max) {
-
-    	Random rand = new Random();
-    	int randomNum = rand.nextInt((max - min) + 1) + min;
-		return randomNum;
-	}
-	
-	/*
-	/* Methods below require mutex lock
-	*/
-
 	//Test for unsafe state
-	private boolean safety(int i) { //COMPLETE THIS
-		return safe;
+	private boolean safety() {
+		int[] work = available;
+		boolean[] finish = new boolean[btNum];
+		for(int i = 0; i < btNum; i++){
+			finish[i] = false;
+		}
+
+		for(int i = 0; i < btNum; i++){
+			if((finish[i] == false) && !arrayGreaterThan(need[i],work)){
+				work = arrayAdd(work,alloc[i]);
+				finish[i] = true;
+			}
+		}
+
+		for(int k = 0; k < btNum; k++){
+			if (finish[k] == false) {
+				return false;
+			}
+		}
+
+		return true;
 	}
 }

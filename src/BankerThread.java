@@ -31,12 +31,12 @@ public class BankerThread implements Runnable {
 		}		
 	}
 
-	private int[] generateRel() {
+	private int[] generateRel() { //FINISH THIS
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	private int[] generateReq() {
+	private int[] generateReq() { //FINISH THIS
 		// TODO Auto-generated method stub
 		return null;
 	}
