@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 
 public class BankersAlg {
 	
@@ -20,7 +22,12 @@ public class BankersAlg {
 				"Any following arguments, argnum, denote the available number of resources of type arg[argnum - 1].");
 		}
 
-		int[] resources = Array.copyOfRange(args, 1, args.length);
+		//Obtain subset of args for resource availability and cast its members to ints
+		String[] resourceStrings = Arrays.copyOfRange(args, 2, args.length);
+		int[] resources = new int[resourceStrings.length];
+		for(int j = 0; j < resources.length; j++){
+			resources[j] = Integer.parseInt(resourceStrings[j]);
+		}
 		
 		//Banker! Banker!
 		Banker banker = new Banker(bankerthreads, resources);

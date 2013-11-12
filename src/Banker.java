@@ -1,3 +1,5 @@
+import java.util.Random;
+
 
 public class Banker {
 
@@ -15,7 +17,7 @@ public class Banker {
 		init();
 	}
 
-	public init(){
+	public void init(){
 		for(int k = 0; k < btNum; k++){
 			for(int m = 0; m < rNum; m++){
 				max[k][m] = randInt(0,20);
@@ -82,7 +84,7 @@ public class Banker {
 	}
 
 	public int[] arraySubtract(int[] a, int[] b){
-		int[] c;
+		int[] c = null;
 		if((a != null) && (b != null)){
 			if(a.length == b.length){
 
@@ -91,13 +93,13 @@ public class Banker {
 				for(int i = 0; i < a.length; i++){
 					c[i] = a[i] - b[i];
 				}
-				return c;
 			}
 		}
+		return c;
 	}
 
 	public int[] arrayAdd(int[] a, int[] b){
-		int[] c;
+		int[] c = null;
 		if((a != null) && (b != null)){
 			if(a.length == b.length){
 
@@ -106,24 +108,24 @@ public class Banker {
 				for(int i = 0; i < a.length; i++){
 					c[i] = a[i] + b[i];
 				}
-				return c;
 			}
 		}
+		return c;
 	}
 
 	public int[][] matrixSubtract(int[][] a, int[][] b){
-		int[][] c;
+		int[][] c = null;
 		if((a != null) && (b != null)){
 			if(a.length == b.length){
 
-				c = new int[a.length];
+				c = new int[a.length][a[1].length]; //FIX THIS
 
 				for(int l = 0; l < a.length; l++){
-					c[l] = arraySubtract(a.[l],b[l]);
+					c[l] = arraySubtract(a[l],b[l]);
 				}
-				return c;
 			}
 		}
+		return c;
 	}
 
 	public static int randInt(int min, int max) {
@@ -138,7 +140,7 @@ public class Banker {
 	*/
 
 	//Test for unsafe state
-	private boolean safety(int i) {
-
+	private boolean safety(int i) { //COMPLETE THIS
+		return safe;
 	}
 }
