@@ -19,9 +19,11 @@ public class BankersAlg {
 				"The second is the duration of the program run in seconds. " +
 				"Any following arguments, argnum, denote the available number of resources of type arg[argnum - 1].");
 		}
+
+		int[] resources = Array.copyOfRange(args, 1, args.length);
 		
 		//Banker! Banker!
-		Banker banker = new Banker(bankerthreads);
+		Banker banker = new Banker(bankerthreads, resources);
 		
 		//Gimme some BankerThreads
 		BankerThread[] bts = new BankerThread[bankerthreads];
