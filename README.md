@@ -11,6 +11,22 @@ Banker.java - Manages requests and releases from running BankerThread instances
 
 BankersAlg.java - Initializes, starts, and stops the algorithm
 
+Instructions
+==============
+To compile and run:
+
+1. Navigate to bankersAlgJava/src
+2. Enter ```javac *.java```
+3. Enter ```java BankersAlg n d r1 r2 ... rm```
+
+  Argument Descriptions
+  ---------------------
+  n - The number of threads competing for resources
+
+  d - The duration, in seconds, that the algorithm will run for
+
+  rx - The available resources of type x. Any number of resource types that can be stored as a Java int may be used.
+
 ==============
 
 Example Output:
