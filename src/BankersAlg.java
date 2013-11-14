@@ -48,6 +48,9 @@ public class BankersAlg {
 		for(int i = 0; i < bankerthreads; i++){
 			bts[i].setStop(true);
 		}
+		System.out.println("done");
+
+		return;
 	}
 
 }

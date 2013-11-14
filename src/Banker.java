@@ -18,10 +18,14 @@ public class Banker {
 	}
 
 	public void init(){
+		need = new int[btNum][rNum];
+		alloc = new int[btNum][rNum];
+		max = new int[btNum][rNum];
+
 		for(int k = 0; k < btNum; k++){
 			for(int m = 0; m < rNum; m++){
 				max[k][m] = randInt(0,available[m]);
-				alloc[k][m] = randInt(0,max[k][m]);
+				alloc[k][m] = 0;
 			}
 		}
 
@@ -30,52 +34,114 @@ public class Banker {
 
 	//Request resources
 	public void request(int[] r, int i) throws InterruptedException {
+		boolean granted = true;
+		safe = false;
+
 		synchronized(lock){
 			//Make sure request is necessary and sane
-			if(arrayGreaterThan(r,need[i])){
-				return;
+			if(!arrayGreaterThan(r,need[i])){
+				//Wait for resources to become available
+				while(arrayGreaterThan(r,available)){
+					lock.wait();
+				}
+
+				//Go ahead and allocate
+				available = arraySubtract(available, r);
+				alloc[i] = arrayAdd(alloc[i], r);
+				need[i] = arraySubtract(need[i], r);
+
+				//Check for unsafe state
+				safe = safety();
+				System.out.println(safe);
+
+				//If unsafe state found, revert allocation
+				if(!safe){
+					available = arrayAdd(available, r);
+					alloc[i] = arraySubtract(alloc[i], r);
+					need[i] = arrayAdd(need[i], r);
+					granted = false;
+				}
+			}
+			else{
+				granted = false;
 			}
 
-			//Wait for resources to become available
-			while(arrayGreaterThan(r,available)){
-				lock.wait();
+			System.out.println("Request from Thread #" + i);
+			System.out.println("Request:");
+			for(int n = 0; n < rNum; n++){
+				System.out.print("R" + n + ": " + r[n] + "  ");
 			}
-
-			//Go ahead and allocate
-			available = arraySubtract(available, r);
-			alloc[i] = arrayAdd(alloc[i], r);
-			need[i] = arraySubtract(need[i], r);
-
-			//Check for unsafe state
-			safe = safety();
-
-			//If unsafe state found, revert allocation
-			if(!safe){
-				available = arrayAdd(available, r);
-				alloc[i] = arraySubtract(alloc[i], r);
-				need[i] = arrayAdd(need[i], r);
+			System.out.println("\nGranted: " + granted);
+			System.out.println("Available: ");
+			for(int n = 0; n < rNum; n++){
+				System.out.print("R" + n + ": " + available[n] + "  ");
 			}
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
 		}
 	}
 
 	//Return resources to the system
-	public void release(int[] r, int i) {
+	public void release(int[] r, int i) throws InterruptedException{
 		synchronized(lock){
+
 			available = arrayAdd(available, r);
 			alloc[i] = arraySubtract(alloc[i], r);
 			need[i] = arrayAdd(need[i], r);
 
+			System.out.println("Release from Thread #" + i);
+			System.out.println("Release:");
+			for(int n = 0; n < rNum; n++){
+				System.out.print("R" + n + ": " + r[n] + "  ");
+			}
+			System.out.println("\nAvailable: ");
+			for(int n = 0; n < rNum; n++){
+				System.out.print("R" + n + ": " + available[n] + "  ");
+			}
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+
 			lock.notifyAll();
 		}
 	}
+	
+	public int[] generateRel(int ident) { //FINISH THIS
+		int[] val = new int[rNum];
+		
+		synchronized(lock){
+			for(int m = 0; m < rNum; m++){
+				val[m] = randInt(0,alloc[ident][m]);
+			}
+		}
+		
+		return val;
+	}
 
-	public boolean arrayGreaterThan(int[] req, int[] compare){
-		boolean val = true;
+	public int[] generateReq(int ident) { //FINISH THIS
+		int[] val = new int[rNum];
+		
+		synchronized(lock){
+			for(int m = 0; m < rNum; m++){
+				val[m] = randInt(0,need[ident][m]);
+			}
+		}
+		
+		return val;
+	}
+
+	private boolean arrayGreaterThan(int[] req, int[] compare){
+		boolean val = false;
 		if((req != null) && (compare != null)){
 			if(req.length == compare.length){
 				for(int i = 0; i < req.length; i++){
-					if(req[i] <= compare[i]){
-						val = false;
+					if(req[i] > compare[i]){
+						val = true;
 					}
 				}
 			}
@@ -83,7 +149,7 @@ public class Banker {
 		return val;
 	}
 
-	public static int randInt(int min, int max) {
+	private static int randInt(int min, int max) {
 
     	Random rand = new Random();
     	int randomNum = rand.nextInt((max - min) + 1) + min;
@@ -100,7 +166,7 @@ public class Banker {
 	/*
 	*/
 
-	public int[] arraySubtract(int[] a, int[] b){
+	private int[] arraySubtract(int[] a, int[] b){
 		int[] c = null;
 		if((a != null) && (b != null)){
 			if(a.length == b.length){
@@ -115,7 +181,7 @@ public class Banker {
 		return c;
 	}
 
-	public int[] arrayAdd(int[] a, int[] b){
+	private int[] arrayAdd(int[] a, int[] b){
 		int[] c = null;
 		if((a != null) && (b != null)){
 			if(a.length == b.length){
@@ -130,7 +196,7 @@ public class Banker {
 		return c;
 	}
 
-	public int[][] matrixSubtract(int[][] a, int[][] b){
+	private int[][] matrixSubtract(int[][] a, int[][] b){
 		int[][] c = null;
 		if((a != null) && (b != null)){
 			if(a.length == b.length){
@@ -149,14 +215,18 @@ public class Banker {
 	private boolean safety() {
 		int[] work = available;
 		boolean[] finish = new boolean[btNum];
-		for(int i = 0; i < btNum; i++){
-			finish[i] = false;
+
+		for(int j = 0; j < btNum; j++){
+			finish[j] = false;
 		}
 
-		for(int i = 0; i < btNum; i++){
-			if((finish[i] == false) && !arrayGreaterThan(need[i],work)){
-				work = arrayAdd(work,alloc[i]);
-				finish[i] = true;
+		for(int n = 0; n < btNum; n++){
+			for(int i = 0; i < btNum; i++){
+				if((finish[i] == false) && !arrayGreaterThan(need[i],work)){
+					work = arrayAdd(work,alloc[i]);
+					finish[i] = true;
+					i = btNum + 1;
+				}
 			}
 		}
 

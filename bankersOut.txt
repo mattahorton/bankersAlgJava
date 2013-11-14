@@ -1,0 +1,521 @@
+true
+Request from Thread #0
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 1  
+Granted: true
+Available: 
+R0: 1  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 0  R5: 0  R6: 1  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 1  R1: 1  R2: 0  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 1  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 1  R2: 0  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+false
+Request from Thread #1
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 1  R5: 1  R6: 1  R7: 0  R8: 0  
+Granted: false
+Available: 
+R0: 1  R1: 1  R2: 0  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 1  
+Available: 
+R0: 1  R1: 1  R2: 0  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #3
+Request:
+R0: 1  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 1  R7: 1  R8: 1  
+Granted: true
+Available: 
+R0: 0  R1: 1  R2: 0  R3: 1  R4: 1  R5: 1  R6: 0  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #3
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 1  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 0  R3: 1  R4: 1  R5: 1  R6: 1  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #1
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 0  R3: 1  R4: 1  R5: 1  R6: 1  R7: 0  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 1  R2: 0  R3: 0  R4: 0  R5: 1  R6: 1  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 0  R3: 1  R4: 1  R5: 0  R6: 0  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 1  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 0  R6: 0  R7: 0  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 1  R2: 0  R3: 1  R4: 1  R5: 0  R6: 0  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 0  R6: 0  R7: 0  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 1  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 0  R6: 0  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 1  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 0  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 1  R2: 0  R3: 0  R4: 0  R5: 0  R6: 1  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 1  R7: 0  R8: 0  
+
+
+
+
+true
+Request from Thread #3
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 1  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 0  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 1  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 0  R3: 1  R4: 1  R5: 1  R6: 0  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 1  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 0  R8: 0  
+
+
+
+
+Release from Thread #3
+Release:
+R0: 1  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 1  R8: 1  
+Available: 
+R0: 1  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 1  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 1  
+Granted: true
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+false
+Request from Thread #1
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 1  R5: 1  R6: 0  R7: 1  R8: 0  
+Granted: false
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #1
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 1  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 1  R2: 0  R3: 1  R4: 0  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 1  R1: 0  R2: 1  R3: 0  R4: 1  R5: 0  R6: 0  R7: 0  R8: 1  
+Available: 
+R0: 1  R1: 1  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 1  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 1  R1: 0  R2: 0  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #3
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 1  
+Granted: true
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #3
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 1  
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 1  R5: 1  R6: 0  R7: 0  R8: 1  
+Granted: true
+Available: 
+R0: 1  R1: 0  R2: 0  R3: 1  R4: 0  R5: 0  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 1  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 0  R2: 0  R3: 1  R4: 0  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 1  R1: 0  R2: 0  R3: 1  R4: 0  R5: 1  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 1  
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 0  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #3
+Request:
+R0: 1  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 0  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+Release from Thread #3
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 0  R5: 1  R6: 0  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 1  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 0  R5: 0  R6: 0  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #3
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 0  R5: 0  R6: 0  R7: 1  R8: 1  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 1  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 0  R6: 0  R7: 1  R8: 1  
+
+
+
+
+Release from Thread #3
+Release:
+R0: 1  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 1  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 1  R5: 0  R6: 1  R7: 1  R8: 1  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 1  R1: 0  R2: 1  R3: 0  R4: 1  R5: 0  R6: 0  R7: 0  R8: 1  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 0  R3: 1  R4: 0  R5: 0  R6: 1  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 1  R1: 0  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 0  R5: 0  R6: 1  R7: 1  R8: 0  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 1  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 0  R5: 0  R6: 1  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 1  R5: 1  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 1  R6: 1  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 0  R6: 0  R7: 1  R8: 0  
+
+
+
+
+true
+Request from Thread #0
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 0  R6: 0  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 1  R6: 1  R7: 0  R8: 0  
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+false
+Request from Thread #1
+Request:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 1  R6: 1  R7: 1  R8: 0  
+Granted: false
+Available: 
+R0: 0  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #0
+Release:
+R0: 1  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #1
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 0  R2: 1  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+true
+Request from Thread #2
+Request:
+R0: 0  R1: 0  R2: 1  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Granted: true
+Available: 
+R0: 1  R1: 0  R2: 0  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+Release from Thread #2
+Release:
+R0: 0  R1: 0  R2: 0  R3: 0  R4: 0  R5: 0  R6: 0  R7: 0  R8: 0  
+Available: 
+R0: 1  R1: 0  R2: 0  R3: 1  R4: 1  R5: 1  R6: 1  R7: 1  R8: 0  
+
+
+
+
+done

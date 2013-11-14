@@ -2,7 +2,7 @@ public class BankerThread implements Runnable {
 	
 	Banker banker;
 	int identifier;
-	Boolean stopped = false;
+	boolean stopped = false;
 	Thread t;
 	
 	//Constructor
@@ -19,10 +19,10 @@ public class BankerThread implements Runnable {
 
 		while(!stopped){
 			try {
-				r = generateReq();
+				r = generateReq(identifier);
 				banker.request(r, identifier);
 				op();
-				r = generateRel();
+				r = generateRel(identifier);
 				banker.release(r, identifier);
 				sleep();
 			} catch (InterruptedException e) {
@@ -31,14 +31,12 @@ public class BankerThread implements Runnable {
 		}		
 	}
 
-	private int[] generateRel() { //FINISH THIS
-		// TODO Auto-generated method stub
-		return null;
+	private int[] generateRel(int ident) { //FINISH THIS
+		return banker.generateRel(ident);
 	}
 
-	private int[] generateReq() { //FINISH THIS
-		// TODO Auto-generated method stub
-		return null;
+	private int[] generateReq(int ident) { //FINISH THIS
+		return banker.generateReq(ident);
 	}
 
 	//Sleep
@@ -58,11 +56,11 @@ public class BankerThread implements Runnable {
 		Thread.sleep(ms);
 	}
 	
-    public Boolean getStop() {
+    public boolean getStop() {
         return stopped;
     }
 
-    public void setStop(Boolean stop) {
+    public void setStop(boolean stop) {
         this.stopped = stop;
     }
 
