@@ -17,9 +17,9 @@ Example Output:
 
 Output from 
 
-'''
+```
 java BankersAlg 4 10 1 1 1 1 1 1 1 1 1
-'''
+```
 
 can be found in bankersOut.txt
 ==============
